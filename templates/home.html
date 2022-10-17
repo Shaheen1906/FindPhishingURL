@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <title>URL</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+
+    <link rel="stylesheet" href="static/assets/css/templatemo-softy-pinko.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="static/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky dark">
+        <div class="container" style="width: 100%;">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="static/images/hack.png" width="50" alt=""/>
+                        </a>
+                        <div class="logo">
+                            <a class="" href="{{url_for('home')}}"><b>PHI<span style="color: red;">SH</span>Y</b> </a>
+
+                        </div>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            
+                            <li><a href="#welcome" class="active">Home</a></li>
+                            <li><a href="#features">Check URL</a></li>
+                            <li><a href="#work-process">Suggestion</a></li>
+                            <li><a href="#testimonials">User Reviews</a></li>
+                            <li><a href="#contact-us">Add Reviews</a></li>
+                            <li id="login"><a href="{{url_for('signin')}}">Login</a></li>
+                            <li id="logout"><a >Logout</a></li>
+                            <li><a href="{{url_for('signup')}}">SignUp</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+
+                        <a href="#features" class="main-button-slider">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" style="padding-left: 7%;" id="features">
+        <div class="row">
+            <div class="col-sm-6" >
+              <div class="card">
+                <div class="card-body">
+                    <div class="card-header" aria-setsize="15" >Check URL Here</div><br>
+                    <form action="/predict" method ="post">
+                        <input type="text" class="form__input" name ='url' id="url" size="35px" placeholder="Enter URL" required="" />
+                        <label for="url" class="form__label">URL</label>
+                        <button class="button" role="button" >CLICK</button>
+                    </form>
+                </div>
+              </div>
+            </div> <br>
+            <div class="col-sm-5">
+              <div class="card">
+                <div class="card-body">
+                    <div class="card-header" aria-setsize="15" >Result</div><br>
+                  <h6 class = "right "><a href= {{ url }} target="_blank">{{ url }}</a></h6>
+                    <br>
+                       <h3 id="prediction"></h3>
+                       <button class="button2" id="button2" role="button" onclick="window.open('{{url}}')" target="_blank" >Still want to Continue</button>
+                       <button class="button1" id="button1" role="button"  onclick="window.open('{{url}}')" target="_blank">Continue</button>
+                </div>
+              </div>
+            </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+    <section class="section padding-bottom-100">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                  <div class="left-heading">
+                      <h2 class="section-title"></h2>
+                  </div>
+                  <div class="left-text">
+                  </div>
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+              </div>
+          </div>
+      </div>
+  </section>
+
+  
+
+    <!-- ***** Home Parallax Start ***** -->
+    
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-5">
+                        <div class="info">
+                            <h1>Top Fake Links</h1>
+                            <p>Most Searched Fake websites links by our users</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ***** Mini Box Start ***** -->
+                <div id="row" style="display: flex; flex-direction: row;">
+                    {% for x in FakeList %}
+                    <p id="dive" style="display: none;"></p>
+                            <script >
+                                function mydiv(x ="Fake Sites"){
+                                var div = document.createElement('div');    
+                                var insdiv = document.createElement('div');
+                                insdiv.className="mini-box"
+                                insdiv.style.height ="120px";
+                                insdiv.style.width ="150px";
+                                insdiv.style.background="white";
+                                insdiv.style.display ="flex";
+                                insdiv.style.flexDirection ="column";
+                                insdiv.style.justifyContent ="center"
+                                insdiv.style.marginRight = "20px";
+                                insdiv.style.cursor="pointer"
+                                div.appendChild(insdiv)
+                                var l = document.createElement("LI");
+                                var img = document.createElement("img")
+                                img.setAttribute("src","static/assets/images/work-process-item-01.png")
+                                insdiv.appendChild(l);
+                                l.appendChild(img);
+                                var strng = document.createElement("myStrong")   ;
+                                strng.innerText = x;
+                                strng.style.position ="relative" ;
+                                strng.style.top = "15px";
+                                strng.style.color = "#e74c3c";
+                                insdiv.appendChild(strng);
+                                document.getElementById("row").appendChild(div);
+                                }
+                               document.getElementsByName = mydiv("{{x}}");
+                             </script>
+                    {% endfor %}
+                <!-- <div class="row" >
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="static/assets/images/work-process-item-01.png" alt=""></i>
+                            <strong>Dangerous</strong>
+                            <span style="color: red;">Bloomberg.ma</span>
+                        </a>
+                    </div>
+                </div> -->
+                <!-- ***** Mini Box End ***** -->
+            </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+    <!-- ***** Testimonials Start ***** -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Users Review</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p> Check Out the latest reviews</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+            
+          </section>
+
+          <div id="reviewContainer">
+
+          </div>
+
+            </div> 
+        </div>
+    </section>
+    <!-- ***** Testimonials End ***** -->
+
+
+
+
+
+    <!-- ***** Contact Us Start ***** -->
+    <section class="section colored" id="contact-us">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Add your review</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>It will help other users</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                 <!-- ***** Contact Text Start ***** --> 
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h5 class="margin-bottom-30"></h5>
+                    <div class="contact-text">
+                       </div>
+                </div> 
+                <!-- ***** Contact Text End ***** -->
+
+                <!-- ***** Contact Form Start ***** -->
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <div class="contact-form">
+                        <form id="contact" action="/addreview" method="post">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                <input name="review_name" type="text" class="form-control" id="idreview_name" placeholder="Full Name" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <!-- <fieldset>
+                                <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                              </fieldset> -->
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <textarea name="review_message" rows="6" class="form-control" id="idreview_message" placeholder="Your Message" required=""></textarea>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button">Add</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- ***** Contact Form End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us End ***** -->
+    
+   <!-- JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+   crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+   crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+   crossorigin="anonymous"></script>
+
+   <script>
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    function delete_cookie(name) {
+        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+
+    var reviewContainer = document.getElementById('reviewContainer');
+    var login = document.getElementById('login');
+    var logout = document.getElementById('logout');
+    // var input =  document.getElementById('input');
+    // var input2 =  document.getElementById('input2');
+    // if ( input.text = input2.text) {
+    // };
+
+
+    let x = '{{xx}}';
+    let num = x*100;
+    if (0<=x && x<0.50){
+        num = 100-num;
+    }
+    let txtx = num.toString();
+    if(x<=1 && x>=0.50){
+        var label = "Link is "+txtx +"% safe to use...";
+        document.getElementById("prediction").innerHTML = label;
+        document.getElementById("button1").style.display="block";
+    }
+    else if (0<=x && x<0.50){
+        var label = "Link is "+txtx +"% unsafe to use..."
+        document.getElementById("prediction").innerHTML = label ;
+        document.getElementById("button2").style.display="block";
+    }
+
+    document.addEventListener('DOMContentLoaded',async ()=>{
+        if(getCookie("email")!=null){
+            console.log(getCookie("email"));
+            login.innerHTML = ''
+        }else {
+            logout.innerHTML = ''
+        }
+
+        var resData;
+        await fetch('http://127.0.0.1:5000/showAllReviews')
+        .then(res => { return res.json(); })
+        .then(data => resData = data);
+        if (resData.length > 5) {
+            len = 5;
+        }else {
+            len = resData.length;
+        }
+
+        html = '<div class="row" style="padding-left: 5%;">';
+        for(var i = 0; i < len;i++) {
+            html += ' <div class="col-lg-2 col-md-6 col-sm-12"> <div class="team-item"><div class="team-content">  <i><img src="static/assets/images/testimonial-icon.png" alt=""></i> <div class="container"> <h5>'  +resData[i].fullname+ '</h5> </div> <p>' +resData[i].Review+ '</p></div></div></div>';
+        }
+        html += '</div>';
+
+        reviewContainer.innerHTML = html;
+
+    });
+
+
+    logout.addEventListener('click',async()=>{
+        console.log('logout');
+        delete_cookie('email');
+        await fetch('http://127.0.0.1:5000/logout');
+
+        location.reload();
+
+
+    });
+
+
+
+</script>
+
+    <!-- jQuery -->
+    <script src="static/assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/assets/js/popper.js"></script>
+    <script src="static/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="static/assets/js/scrollreveal.min.js"></script>
+    <script src="static/assets/js/waypoints.min.js"></script>
+    <script src="static/assets/js/jquery.counterup.min.js"></script>
+    <script src="static/assets/js/imgfix.min.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="static/assets/js/custom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+  </body>
+</html>
